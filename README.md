@@ -7,6 +7,9 @@ Tutorial 1: Node.js + Express 4 + MySQL
 sudo npm install
 ```
 
+### Database:
+Import the database structure from this file: database.json
+
 ### To execute:
 
 ```sh
