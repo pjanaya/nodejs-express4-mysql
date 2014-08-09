@@ -26,7 +26,7 @@ var sequelize = new Sequelize(
 	config.user,
 	config.password,
 	{
-		dialect: config.driver,
+    dialect: config.driver,
     logging: console.log,
 		define: {
 			timestamps: false
