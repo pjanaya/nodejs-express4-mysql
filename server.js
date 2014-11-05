@@ -68,10 +68,10 @@ var User = sequelize.define('users', {
 			shasum.update(password);
 			password = shasum.digest('hex');
 
-			User.update({ username: username,password: password},{ id: id }).success(onSuccess).error(onError);
+			User.update({ username: username,password: password},{where: {id: id} }).success(onSuccess).error(onError);
 	   },
       removeById: function(user_id, onSuccess, onError) {
-			User.destroy({id: user_id}).success(onSuccess).error(onError);
+			User.destroy({where: {id: user_id}}).success(onSuccess).error(onError);
 	  }
     }
   });
